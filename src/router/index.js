@@ -1,7 +1,10 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
+import { BootstrapVue, BootstrapVueIcons } from 'bootstrap-vue'
 
+Vue.use(BootstrapVue)
+Vue.use(BootstrapVueIcons)
 Vue.use(VueRouter);
 
 const routes = [
