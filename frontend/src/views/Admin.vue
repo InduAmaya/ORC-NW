@@ -1,0 +1,133 @@
+<template>
+  <div id="form">
+    <h2>
+      <center>Login</center>
+    </h2>
+
+    <b-container fluid>
+      <div class="login_form">
+        <center>
+          <b-card
+            bg-variant
+            text-variant="dark"
+            border-variant="dark"
+            style="max-width: 30rem;"
+            align="left"
+          >
+            <b-form @submit.prevent="login">
+              <center>
+                <p id="msg" v-if="submit_login === 'error'">{{ err_msg }}</p>
+              </center>
+              <b-form-group label="Username:" label-for="username">
+                <b-form-input
+                  id="username"
+                  placeholder="Enter your username"
+                  required
+                  v-model="login_form.username"
+                />
+              </b-form-group>
+
+              <b-form-group label="Password:" label-for="password">
+                <b-form-input
+                  id="password"
+                  type="password"
+                  placeholder="Enter your password"
+                  required
+                  v-model="login_form.password"
+                />
+                <br />
+                <router-link to="/login/resetpassword"
+                  >Forgot your password?</router-link
+                >
+              </b-form-group>
+              <center>
+              <b-button
+                type="submit"
+                block variant="success"
+                :disabled="submit_login === 'ok'"
+                >Login</b-button
+              >
+              </center>
+            </b-form>
+          </b-card>
+        </center>
+      </div>
+    </b-container>
+  </div>
+</template>
+
+<script>
+// import { required } from "vuelidate/lib/validators";
+import axios from "axios";
+
+export default {
+  name: "admin",
+  data() {
+    return {
+      login_form: {
+        username: "",
+        password: "",
+        user_type: ""
+      },
+      users: [],
+
+      submit_login: null,
+      err_msg: "Invalid Username or Password"
+    };
+  },
+
+  mounted() {
+    axios
+      .get("http://localhost:8085/login")
+      .then(response => {
+        this.users = response.data;
+        console.log(this.users); //ok
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  },
+
+  methods: {
+    login() {
+      //debugger;
+      let newLogin = {
+        username: this.login_form.username,
+        password: this.login_form.password
+      };
+      console.log(newLogin);
+
+      axios
+        .post("http://localhost:8085/login", newLogin)
+        .then(response => {
+          console.log(response);
+          if (response) {
+            if (
+              response.data.isLoggedIn == true
+            ) {
+              console.log(response.data.username,'in')
+              this.$router.push({name : 'items' });
+            }
+          }
+        })
+        .catch(error => {
+          console.log(error);
+          console.log(this.err_msg);
+          this.submit_login = "error";
+        });
+    }
+   }
+ };
+</script>
+
+<style scoped>
+#form {
+  margin-top: 20px;
+  padding-bottom: 25px;
+}
+#msg {
+  font-size: 15px;
+  color: red;
+}
+
+</style>
