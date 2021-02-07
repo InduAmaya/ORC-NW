@@ -1,21 +1,11 @@
 <template>
   <div>
-    <div class="btn">
-      <b-button squared variant="dark" to="/admindashboard">Back</b-button>
-      </div>
-    
     <b-card no-body>
-      <b-tabs pills card width="100%" content-class="mt-3" justified>
+      <b-tabs pills card width="100%" content-class="mt-3" justified >
         <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
-          <h2>Current Details of Items</h2>
+          <center></center>
+          <h3 class="h3">Booking Details</h3>
           <form class="form-inline">
-            <input
-              id="itemInput"
-              class="form-control mr-sm-2"
-              type="text"
-              placeholder="Search"
-            
-            />
             
           </form>
         </nav>
@@ -25,11 +15,7 @@
               :per-page="perPage"
               aria-controls="my-table"></b-pagination> -->
         
-        <b-tab title="CIS/LAB/01">
           <b-card-text>
-            <center>
-              <h3>CIS/LAB/01</h3>
-            </center>
             <!-- <br /> -->
             <p>Number of rows : {{this.itemsLab1.length}}</p>
             <div class="table-responsive-lg">
@@ -53,24 +39,12 @@
                     <td>{{item.contact}}</td>
                     <td>{{item.days}}</td>
                     <td>{{item.participants}}</td>
-                    
-                    <td>
-                      <b-button
-                        :to="{name: 'UpdateItem', params: {id:item._id }}"
-                        variant="success"
-                      >Edit</b-button>
-                      <b-button
-                        type="submit"
-                        variant="danger"
-                        v-on:click="deleteRecord1(item._id)"
-                      >Delete</b-button>
-                    </td>
                   </tr>
                 </tbody>
               </table>
             </div>
           </b-card-text>
-        </b-tab>
+
         <!-- </div> -->
         
       </b-tabs>
@@ -152,5 +126,12 @@ table tbody tr:nth-child(2n) td {
 h5 {
   margin-top: 10px;
   margin-left: 15px;
+}
+
+
+</style>
+<style>
+.h3{
+  align-content: center;
 }
 </style>
