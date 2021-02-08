@@ -51,23 +51,21 @@
         </b-col>
         <b-col>
           <b-card no-body class="text-left" border-variant="light">
-            <h3 class="column-h3">Safety</h3>
-            <p>Needless to say, safety is our primary concern and we adopt every possible safety precaution to ensure the 
-              wellbeing of our clients on site.</p>
+            <h3 class="column-h3">Unity</h3>
+            <p>One of the main goals of outbound training events carried out by Academy of Adventure is to foster unity 
+              among the participants to enable stronger</p>
           </b-card>
         </b-col>
         <b-col>
           <b-card no-body class="text-left" border-variant="light">
-            <h3 class="column-h3">Safety</h3>
-            <p>Needless to say, safety is our primary concern and we adopt every possible safety precaution to ensure the 
-              wellbeing of our clients on site.</p>
+            <h3 class="column-h3">Responsibility</h3>
+            <p>The Academy of Adventure prides itself in being a responsible organization that also instills the same value in its participants.Our activities are carefully planned</p>
           </b-card>
         </b-col>
         <b-col>
           <b-card no-body class="text-left" border-variant="light">
-            <h3 class="column-h3">Safety</h3>
-            <p>Needless to say, safety is our primary concern and we adopt every possible safety precaution to ensure the 
-              wellbeing of our clients on site.</p>
+            <h3 class="column-h3">Eco friendliness</h3>
+            <p>In today’s world, personal growth often comes at the cost of the environment. At the Academy of Adventure, we are completely opposed to this.</p>
           </b-card>
         </b-col>
       </b-row>

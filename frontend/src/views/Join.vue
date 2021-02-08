@@ -1,26 +1,27 @@
 <template>
     <div class="join">
         <div align-h="center">
-            <b-card
-                class="mx-5 mt-4"
-                overlay
-                img-src="../assets/join.jpg"
-                img-alt="Card Image"
-                img-top
-                img-height="500px"
-                text-variant="white"
-                    
-            >
-            <b-card-text class="mt-5">
-                <h1>Join Us...</h1>
-                <h2>Have a wonderful experience</h2>
-            </b-card-text>
-            </b-card>
-        </div>  
+          <b-card
+
+            overlay
+            img-src="../assets/join.png"
+            img-alt="Card Image"
+            img-top
+            text-variant="black"
+              
+          >
+          </b-card>
+        </div>
+
+    <div class="quote">    
+      <div no-body class="text-center py-5" text-variant="black" >
+        Ours is a center unlike any other. <br> incredible opportunities and plan your adventure.
+    </div>
+    </div>
 
         <div align="center">
           <b-card class="my-5" style="width: 600px; background-color: rgba(0,0,255,.1)">
-            <h3>Registration</h3>
+            <h3>Booking</h3>
     <b-form @submit.prevent="addRecords" @reset="onReset" v-if="show">
       <b-form-group id="input-group-1" label="Your Name:" label-for="input-2">
         <b-form-input
@@ -139,3 +140,9 @@
     }
   }
 </script>
+
+<style scoped>
+  .quote{
+    font-size: 24px;
+  }
+</style>

@@ -1,30 +1,51 @@
 <template>
   <div class="about">
-    <h1>Outdoor Recreational Center</h1>
     <div align-h="center">
     <b-card
-      class="mx-5 mt-4"
+
       overlay
-      img-src="../assets/about.jpg"
+      img-src="../assets/about.png"
       img-alt="Card Image"
       img-top
-      img-height="500px"
       text-variant="black"
          
     >
-      <b-card-text class="mt-5">
-        <h2>Adventures Are For Adventurers</h2>
+      <b-card-text class="text-right mx-5" align-v="center">
+        <h2 style="color: white">Adventures Are For Adventurers</h2>
       </b-card-text>
     </b-card>
     </div>
-    <div no-body class="text-center py-5" text-variant="black" >
-      The Outdoor Recreation Center is under the Department of Sports Sciences and Physical Education, Sabaragamuwa University of Sri Lanka. <br> 
+    <div class="intro">    
+      <div no-body class="text-center py-5" text-variant="black" >
+      The Outdoor Recreation Center is under the Department of Sports Sciences and Physical Education, Sabaragamuwa University of Sri Lanka.
       This is an inbound and outbound training center which has many interesting and adventurous events such as hiking, water rafting, camping, waterfall abseiling, etc.
     </div>
-    
-    <div id="location" class="text-center py-4">
-      <h4>Location</h4>
     </div>
+
+     <div class="vision">
+    <h3 class="h3">Our Values</h3>
+
+    <b-container class="column-choose" style="margin-left : 100px; margin-right : 100px; padding-bottom : 30px">
+      <div class="row">
+      <b-row align-v="stretch">
+        <b-col >
+          <b-card id="card" no-body class="text-left" text-variant="white">
+            <h3 class="column-h3">Vision</h3>
+            <p class="p">To be the most prominent eco-friendly, professional adventure training and adventure-based recreational service
+               provider in Sri Lanka.</p>
+          </b-card>
+        </b-col>
+        <b-col>
+          <b-card id="card" no-body class="text-left" text-variant="white">
+            <h3 class="column-h3">Mission</h3>
+            <p class="p">To strengthen personal development, enhance optimism and increase excitement in an eco-friendly environment 
+              by drawing participants out of their comfort zones, to undertake challenges in an outdoor setting that is safe 
+              and in keeping with the best practices of outward-bound training and adventure-based activities.</p>
+          </b-card>
+        </b-col>
+      </b-row></div>
+    </b-container>    
+  </div>   
 
     <div id="safety" class="text-center py-4">
       <h4>Safety</h4>
@@ -38,3 +59,30 @@
   </div>
 
 </template>
+
+<style scoped>
+  .intro{
+    font-size: 24px;
+  }
+
+  .vision{
+   background-color: rgb(12, 30, 48);
+ }
+
+  .h3{
+    color: rgb(255, 255, 255);
+  }
+
+  .column-h3{
+    color: rgb(245, 210, 71);
+  }
+
+  .p{
+    font-size: 20px;
+  }
+
+  #card{
+     background-color: rgb(12, 30, 48);
+  }
+
+</style>
